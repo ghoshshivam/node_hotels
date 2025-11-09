@@ -12,7 +12,7 @@ app.use(bodyParser.json());//saves data in req.body
 
 //import the Person model
 const Person = require('./models/person.js');
-//import menuitem model/schema
+//import menuitem model/schema.
 const MenuItem = require('./models/menu.js');
 
 //Middleware function to log request details
@@ -33,7 +33,7 @@ app.get('/',function(req,res){
 
 //import person routes and using it
 const personRoutes = require('./routes/personRoutes.js');
-app.use('/person',localAuthMiddleware,personRoutes);//using authenciation middleware
+app.use('/person',personRoutes);//using authenciation middleware
 
 //import menu routes and using it
 const menuRoutes = require('./routes/menuRoutes.js');
